@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-ext": "ng b --aot --prod --build-optimizer --optimization --source-map=false",
     "serve-ext": "ng build --watch --configuration=dev"
   },
   "private": true,
