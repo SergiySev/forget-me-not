@@ -1,0 +1,46 @@
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  all: unset
+}
+
+button {
+  text-align: center;
+  width: 50px;
+  margin-right: 10px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button {
+  display:inline-block;
+  padding:0.3em;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  text-align:center;
+  position:relative;
+  cursor: pointer;
+}
+button:active {
+  top: 1px;
+}
+button[disabled] {
+  opacity: 0.3;
+}
+
+button.add {
+  background-color:#3369ff;
+}
+button.delete {
+  background-color: #920000;
+}

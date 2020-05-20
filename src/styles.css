@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  min-width: 600px;
+  min-height: 300px;
+  margin: 15px;
+
+  font-family: Verdana;
+  font-size: 11px;
+}
+
+textarea, select, input, button { outline: none; }

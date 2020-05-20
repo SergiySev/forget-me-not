@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <fieldset>
+    <legend></legend>
+    <input type="text" placeholder="ID" formControlName="id">
+    <input type="text" placeholder="Name" formControlName="name">
+    <span class="color-box" [style]="{background: currentColor}"></span>
+    <select (change)="changeColor($event)" formControlName="color">
+      <option id="{{color.label}}" [value]="color.value" *ngFor="let color of colors">{{color.label}}</option>
+    </select>
+    <input type="checkbox" formControlName="ignore">Ignore
+    <span class="space"></span>
+    <button
+      (click)="onSave()"
+      class="add"
+      [disabled]="onAddButtonRule()"
+      type="button">{{isAddState ? 'Add' : 'Save'}}</button>
+    <button
+      (click)="onDelete()"
+      class="delete"
+      type="button">{{isAddState ? 'Clear' : 'Delete'}}</button>
+  </fieldset>
+</form>

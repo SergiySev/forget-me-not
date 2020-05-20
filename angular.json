@@ -3,6 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+
     "fma": {
       "projectType": "application",
       "schematics": {},
@@ -11,8 +12,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./extra-webpack.config.js"
+            },
             "outputPath": "dist/fma",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -21,7 +25,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.css"
@@ -29,6 +34,11 @@
             "scripts": []
           },
           "configurations": {
+            "dev": {
+              "customWebpackConfig": {
+                "path": "./extra-webpack-dev.config.js"
+              }
+            },
             "production": {
               "fileReplacements": [
                 {

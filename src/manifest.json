@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Forget-Me-Not",
+  "version": "1.0",
+
+  "description": "Extension to remember slack users",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "48": "assets/icons/48.png",
+    "128": "assets/icons/128.png"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js",
+      "runtime.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://app.slack.com/client/*"],
+      "js": ["content_script.js", "runtime.js"]
+    }
+  ],
+
+  "page_action": {
+    "default_popup": "index.html",
+    "default_title": "forget-me-not"
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "clipboardWrite",
+    "webNavigation"
+  ]
+}

@@ -1,0 +1,31 @@
+.color-box {
+  margin: 0 3px 0 0px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: green;
+  border-radius: 7px;
+
+  letter-spacing: normal;
+  vertical-align: middle;
+}
+
+.space {
+  width: 20px;
+  display: inline-block;
+}
+
+input, select {
+  margin-right: 5px;
+}
+
+
+fieldset {
+  border: 0;
+}
+
+input[type="text"]:disabled {
+  background: #dbdbdb;
+  text-align: center;
+  border: #dbdbdb 2px solid;
+}
